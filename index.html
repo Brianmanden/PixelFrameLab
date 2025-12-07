@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelFrameLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PixelFrameLab</h1>
+    <div id="app">
+        <aside id="controls">
+            <h2>Tools</h2>
+            <div id="tool-selector">
+                <button id="pen-tool">Pen</button>
+                <button id="eraser-tool">Eraser</button>
+                <button id="fill-tool">Fill</button>
+            </div>
+            <h2>Colors</h2>
+            <input type="color" id="color-picker" value="#000000">
+            <div id="palette">
+                <!-- Color swatches will go here -->
+            </div>
+        </aside>
+        <main id="editor-area">
+            <h2>Editor</h2>
+            <canvas id="pixel-canvas"></canvas>
+            <div id="frame-manager">
+                <h3>Frames</h3>
+                <div id="frames-container">
+                    <!-- Animation frames will be displayed here -->
+                </div>
+                <button id="add-frame">Add Frame</button>
+                <button id="duplicate-frame">Duplicate Frame</button>
+                <button id="delete-frame">Delete Frame</button>
+            </div>
+        </main>
+        <section id="preview-area">
+            <h2>Animation Preview</h2>
+            <canvas id="animation-preview-canvas"></canvas>
+            <div id="animation-controls">
+                <input type="range" id="animation-speed" min="1" max="10" value="5">
+                <span id="speed-display">Speed: 5</span>
+            </div>
+            <h2>Import/Export</h2>
+            <input type="file" id="import-image" accept="image/*">
+            <button id="export-image">Export</button>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
